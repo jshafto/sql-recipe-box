@@ -10,7 +10,9 @@ DROP USER IF EXISTS recipe_box_app;
 
 -- YOUR CODE HERE
 
-
+CREATE USER recipe_box_app WITH PASSWORD 'SPuaQ3no';
+CREATE DATABASE recipe_box WITH OWNER recipe_box_app;
+REVOKE CONNECT ON DATABASE recipe_box FROM PUBLIC;
 
 
 -- You will need to create a new database for the application named

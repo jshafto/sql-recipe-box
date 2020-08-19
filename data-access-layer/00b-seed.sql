@@ -9,7 +9,7 @@
 
 -- YOUR CODE HERE
 
-
+SET ROLE recipe_box_app;
 
 
 
@@ -25,7 +25,13 @@
 -- | updated     | TIMESTAMP    | NOT NULL, DEFAULT CURRENT_TIMESTAMP |
 
 -- YOUR CODE HERE
-
+create table recipes (
+    id serial,
+    title varchar(200) not null,
+    created timestamp not null default current_timestamp,
+    updated timestamp not null default current_timestamp,
+    primary key(id)
+);
 
 
 
@@ -47,10 +53,18 @@
 -- | recipe_id     | INTEGER     | FK, NOT NULL |
 
 -- YOUR CODE HERE
+create table instructions (
+    id serial,
+    specification text not null,
+    list_order integer not null,
+    recipe_id integer not null,
+    foreign key (recipe_id) references recipes(id),
+    primary key (id)
+);
 
 
-
-
+   --FOREIGN KEY(fk_columns)
+   --REFERENCES parent_table(parent_key_columns)
 
 
 -- Create a table for the "units_of_measure". It will need the following columns
@@ -63,7 +77,11 @@
 -- | name        | VARCHAR(20) | NOT NULL    |
 
 -- YOUR CODE HERE
-
+create table units_of_measure (
+    id serial,
+    name varchar(20) not null,
+    primary key (id)
+);
 
 
 
@@ -87,7 +105,16 @@
 
 -- YOUR CODE HERE
 
-
+create table ingredients (
+    id serial,
+    amount numeric(5,2) not null,
+    unit_of_measure_id integer not null,
+    food_stuff varchar(500) not null,
+    recipe_id integer not null,
+    foreign key (unit_of_measure_id) references units_of_measure(id),
+    foreign key (recipe_id) references recipes(id),
+    primary key(id)
+);
 
 
 

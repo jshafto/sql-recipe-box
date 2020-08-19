@@ -43,3 +43,16 @@
 
 
 -- YOUR CODE HERE
+insert into instructions (specification, recipe_id)
+values (
+    (select list_order from instructions where )
+    $1,
+    $2
+)
+
+
+--SELECT * FROM payment
+--WHERE amount = (
+--   SELECT MAX (amount)
+--   FROM payment
+--);

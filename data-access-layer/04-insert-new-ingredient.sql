@@ -11,3 +11,6 @@
 
 
 -- YOUR CODE HERE
+insert into ingredients (amount, unit_of_measure_id, food_stuff, recipe_id)
+values($1,$2,$3,$4)
+returning id;

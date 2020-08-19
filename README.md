@@ -1,11 +1,11 @@
 # Recipe Box
-Completed as part of the App Academy Curriculum. Implemenetation by Juliet Shafto and .
+Completed as part of the App Academy Curriculum. Implementation by Juliet Shafto and Miah Barnes.
 
 ## Project Status
-- [ ] Set up database
-- [ ] Get most recent recipes
-- [ ] Accessing recipe information by recipe ID
-- [ ] Adding new recipes
+- [x] Set up database
+- [x] Get most recent recipes
+- [x] Accessing recipe information by recipe ID
+- [x] Adding new recipes
 - [ ] Editing recipes
 - [ ] Searching for recipes
 
