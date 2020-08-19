@@ -6,8 +6,8 @@ Completed as part of the App Academy Curriculum. Implementation by Juliet Shafto
 - [x] Get most recent recipes
 - [x] Accessing recipe information by recipe ID
 - [x] Adding new recipes
-- [ ] Editing recipes
-- [ ] Searching for recipes
+- [x] Editing recipes
+- [x] Searching for recipes
 
 ## Project Description
 In this project, you will build the Data Access Layer to power a Web

@@ -43,16 +43,18 @@
 
 
 -- YOUR CODE HERE
-insert into instructions (specification, recipe_id)
+insert into instructions (list_order, specification, recipe_id)
 values (
-    (select list_order from instructions where )
+    (select COALESCE(MAX(list_order+1), 1) from instructions where recipe_id=($2)),
     $1,
     $2
-)
+);
 
+
+-- COALESCE(MAX(list_order+1), 1)
 
 --SELECT * FROM payment
 --WHERE amount = (
---   SELECT MAX (amount)
+--   SELECT COALESCE(MAX(amount +1), 1)
 --   FROM payment
 --);
