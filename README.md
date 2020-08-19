@@ -1,5 +1,15 @@
 # Recipe Box
+Completed as part of the App Academy Curriculum. Implemenetation by Juliet Shafto and .
 
+## Project Status
+- [ ] Set up database
+- [ ] Get most recent recipes
+- [ ] Accessing recipe information by recipe ID
+- [ ] Adding new recipes
+- [ ] Editing recipes
+- [ ] Searching for recipes
+
+## Project Description
 In this project, you will build the Data Access Layer to power a Web
 application. This means that you will provide all of the SQL that it takes to
 get data into and from the database. You will do this in SQL files that the
@@ -9,7 +19,7 @@ application will load and read.
 project is structured this way so that it isolates the activity of SQL writing.
 Do not use this project as a template for your future projects.
 
-## The data model analysis
+### The data model analysis
 
 What goes into a recipe box? Why, recipes, of course! Here's an example recipe
 card.
@@ -59,7 +69,7 @@ That is enough to make a good model for the recipe box.
 
 ![recipe box data model]
 
-## Getting started
+### Getting started
 
 * Download the starter project from
   https://github.com/appacademy-starters/sql-recipe-box
@@ -86,7 +96,7 @@ Postbird, or `psql` with that connection.
 **Warning**: running the seed files will destroy all data that you have in the
 database.
 
-## Your SQL
+### Your SQL
 
 When you write the SQL, they will mostly be parameterized queries. The first
 couple of files will show you how it needs to be done, where you will place the
@@ -98,7 +108,7 @@ or more lines with the content `-- YOUR CODE HERE`. It is your job to write the
 SQL statement described in the block above that code. Each file is named with
 the intent of the SQL that it should contain.
 
-## The application
+### The application
 
 The application is a standard [express.js] application using the [pug] library
 to generate the HTML and the [node-postgres] library to connect to the database.
@@ -113,43 +123,43 @@ in the application. Tying those together, you'll know you're done when you have
 all of the SQL files containing queries and there are no errors in the UI or
 console.
 
-## Directions
+### Directions
 
 Fill out the **00a-schema.sql** and **00b-seed.sql** files first. Then seed
 the database with command, `npm run seed`.
 
-### Home Page
+#### Home Page
 
 Start the server by running `npm run dev`. Then go to `localhost:3000` you should
-see the home page with "Latest Recipes". To show the latest recipes properly, 
+see the home page with "Latest Recipes". To show the latest recipes properly,
 complete the `01-get-ten-most-recent-recipes.sql` file.
 
 After completing the file, make sure you correctly defined the sql query so that
 the first recipe listed is the most recently updated recipe.
 
-### `/recipes/:id`
+#### `/recipes/:id`
 
 If you click on one of the recipes in the list of recipes on the home page, it
 will direct you to that recipe's Detail Page. Complete the following files that
-correspond to this page and make sure to test a file right after you fill out 
+correspond to this page and make sure to test a file right after you fill out
 the file by refreshing the page:
   - `02a-get-recipe-by-id.sql`
   - `02b-get-ingredients-by-recipe-id.sql`
   - `02c-get-instructions-by-recipe-id.sql`
 
-Make sure to read the instructions well! In all the above sql queries, the 
+Make sure to read the instructions well! In all the above sql queries, the
 `$1` parameter will be the recipe id.
 
-### `/recipes/new`
+#### `/recipes/new`
 
-Click on `ADD A RECIPE` button on the Navigation Bar to direct you to the 
+Click on `ADD A RECIPE` button on the Navigation Bar to direct you to the
 New Recipe Form page. Fill out the `03a-insert-new-recipe.sql` file so you can
 create a new recipe.
 
-### `/recipes/:id/edit`
+#### `/recipes/:id/edit`
 
 After creating a new recipe, you will be directed to the Recipe Edit page where
-you can add instructions and ingredients to a recipe. Complete the following 
+you can add instructions and ingredients to a recipe. Complete the following
 files that correspond to this page and make sure to test a file right after
 you fill out the file:
   - `03b-get-units-of-measure.sql`
@@ -157,7 +167,7 @@ you fill out the file:
   - `05-insert-new-instruction.sql`
   - `06-delete-recipe.sql`
 
-### `/recipes?term={searchTerm}`
+#### `/recipes?term={searchTerm}`
 
 Allow users to find recipes by a part of their name using the Search Bar in the
 Navigation Bar. Complete `07-search-recipes.sql` for this feature.
